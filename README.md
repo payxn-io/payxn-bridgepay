@@ -25,6 +25,12 @@ npx hardhat compile
 𝘵𝘩𝘪𝘴 𝘸𝘪𝘭𝘭 𝘨𝘦𝘯𝘦𝘳𝘢𝘵𝘦 𝘵𝘩𝘦 𝘢𝘳𝘵𝘪𝘧𝘢𝘤𝘵𝘴 𝘧𝘰𝘭𝘥𝘦𝘳 𝘵𝘩𝘢𝘵 𝘺𝘰𝘶 𝘤𝘢𝘯 𝘤𝘢𝘭𝘭 𝘪𝘯 𝘺𝘰𝘶𝘳 𝘴𝘤𝘳𝘪𝘱𝘵𝘴 𝘪𝘦:
 import { abi } from "../../artifacts/contracts/BridgeableToken.sol/BridgeableToken.json";
 
+- [ ] Modify hardhat.config.ts and add etherscan api and sourcify 
+- [ ] Add arguments.js to verify contract 
+```
+npx hardhat verify --constructor-args arguments.js --network sepolia 0xa18f2e81f10a1a89151e99433434dd5a0a09f759
+```
+
 ### Deployed contracts
 
 <img width="620" alt="Screenshot 2024-11-02 at 10 20 09 PM" src="https://github.com/user-attachments/assets/d0952ece-82b3-4f8d-957e-33f6546b9639">
