@@ -71,3 +71,8 @@ function validateParameters(parameters: string[]) {
   
     process.exit();
   }
+
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
