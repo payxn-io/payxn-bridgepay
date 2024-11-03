@@ -8,4 +8,5 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 contract BridgeableToken is ERC20, ERC20Burnable, AccessControl {
     event Bridge(address indexed owner, uint256 indexed amount);
 
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 }
