@@ -7,3 +7,6 @@ import { sepolia, baseSepolia } from "viem/chains";
 import { abi, bytecode } from "../artifacts/contracts/BridgeableToken.sol/BridgeableToken.json";
 import * as dotenv from "dotenv";
 dotenv.config();
+
+const providerApiKey = process.env.ALCHEMY_API_KEY || "";
+const deployerPrivateKey = process.env.PRIVATE_KEY || "";
