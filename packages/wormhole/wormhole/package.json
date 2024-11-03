@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@wormhole-foundation/wormhole-connect": "^1.1.2"
+  }
+}
