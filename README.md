@@ -2,7 +2,7 @@
 ```
 Enables payment of USDC on one chain to another. 
 ```
-![Bridgepay-demo](https://github.com/user-attachments/assets/5eac8592-4b68-429f-9fe9-4547cefe3a0e)
+![Bridgepay-demo](https://github.com/user-attachments/assets/bd33fc6d-93ff-4547-8882-4709a0862ecb)
 
 ### To do list
 - [x] Create a fresh new dapp using Scaffold ETH 2 as a base
