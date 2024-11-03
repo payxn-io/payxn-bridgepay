@@ -5,7 +5,7 @@ Enables payment of USDC on one chain to another.
 ### To do list
 - [x] Create a fresh new dapp using Scaffold ETH 2 as a base
 - [ ] Update package and use viem to deploy scripts
-- [ ] Create contracts directory and build BridgeableToken.sol
+- [x] Create contracts directory and build BridgeableToken.sol
 - [ ] Create scripts directory
 - [ ] Create DeployBridgeableToken.ts, MintTokens.ts, BridgeTokens.ts scripts, etc
 - [ ] Deploy token to Sepolia testnets
