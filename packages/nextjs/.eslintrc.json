@@ -3,12 +3,12 @@
   "rules": {
     // "@typescript-eslint/no-explicit-any": "off",
     // "@typescript-eslint/ban-ts-comment": "off",
-    /*"prettier/prettier": [
-      "warn",
-      {
-        "endOfLine": "auto"
-      }
-    ]*/
+    // "prettier/prettier": [
+    //   "warn",
+    //   {
+    //     "endOfLine": "auto"
+    //   }
+    // ]
     "no-console": "off",
     "no-unused-vars": "off",
   }
