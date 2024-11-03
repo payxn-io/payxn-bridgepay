@@ -38,8 +38,29 @@
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.5",
+    "@nomicfoundation/hardhat-ignition-viem": "^0.15.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.11",
+    "@nomicfoundation/hardhat-viem": "^2.0.5",
+    "@nomicfoundation/ignition-core": "^0.15.5",
+    "@types/chai": "^4.3.19",
+    "@types/chai-as-promised": "^7.1.8",
+    "@types/mocha": "^10.0.8",
+    "chai": "^4.5.0",
+    "hardhat": "^2.22.11",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.8.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "viem": "^2.21.12"
   },
   "engines": {
     "node": ">=18.18.0"
