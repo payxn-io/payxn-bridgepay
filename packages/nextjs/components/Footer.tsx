@@ -54,7 +54,7 @@ export const Footer = () => {
             <span>·</span>
             <div className="flex justify-center items-center gap-2">
               <p className="m-0 text-center">
-                Powered by <HeartIcon className="inline-block h-4 w-4" /> with
+                Made with <HeartIcon className="inline-block h-4 w-4" /> by
               </p>
               <a
                 className="flex justify-center items-center gap-1"
