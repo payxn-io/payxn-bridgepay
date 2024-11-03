@@ -56,8 +56,10 @@ export const TokenBalances = () => {
       <div className="card-body">
         <h2 className="card-title">USDC Token Balances</h2>
 
-        {balanceSepolia !== undefined && <div>Sepolia Balance: {balanceSepolia ? balanceSepolia.toString() : 0}</div>}
-        {balanceBase !== undefined && <div>Base Balance: {balanceBase ? balanceBase.toString() : 0}</div>}
+        {balanceSepolia !== undefined && (
+          <div>ETH Sepolia $USDC Balance: {balanceSepolia ? balanceSepolia.toString() : 0}</div>
+        )}
+        {balanceBase !== undefined && <div>Base $USDC Balance: {balanceBase ? balanceBase.toString() : 0}</div>}
       </div>
     </div>
   );
