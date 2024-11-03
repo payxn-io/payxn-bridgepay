@@ -14,6 +14,7 @@ Enables payment of USDC on one chain to another.
 - [ ] Check token status
 - [ ] Watch for bridges on Sepolia testnets
 - [ ] Bridge tokens from Sepolia
+- [ ] Add frontend to bridge tokens from Sepolia
 - [ ] Deploy
 
 ### Getting started
