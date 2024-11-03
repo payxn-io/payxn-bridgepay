@@ -5,6 +5,7 @@ dotenv.config();
 
 const providerApiKey = process.env.ALCHEMY_API_KEY || "";
 const deployerPrivateKey = process.env.PRIVATE_KEY || "";
+const etherscanApiKey = process.env.ETHERSCAN_API_KEY || "";
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.viem.getWalletClients();
@@ -29,6 +30,16 @@ const config: HardhatUserConfig = {
       accounts: [deployerPrivateKey],
     },
   },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "YOUR_ETHERSCAN_API_KEY"
+  },
+  sourcify: {
+    // Disabled by default
+    // Doesn't need an API key
+    enabled: true
+  }
 };
 
 
