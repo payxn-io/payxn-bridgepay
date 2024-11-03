@@ -6,7 +6,7 @@ export const TokenBalances = () => {
   const { address: connectedAddress } = useAccount();
   // const tokenAddress = "0xa18f2e81f10a1a89151e99433434dd5a0a09f759";
   const tokenAddress1 = "0xa18f2e81f10a1a89151e99433434dd5a0a09f759";
-  const tokenAddress2 = "0xd19e8d3a9720df22f6689eb9b54c691414efe8c2";
+  const tokenAddress2 = "0xdda5a1fcd29b7a765a3d8d4fc8cf4ee4fb0ec5be";
   const queryClient = useQueryClient();
 
   const result = useReadContracts({

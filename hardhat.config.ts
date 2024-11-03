@@ -33,8 +33,9 @@ const config: HardhatUserConfig = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: "YOUR_ETHERSCAN_API_KEY"
+    apiKey: "ETHERSCAN_API_KEY"
   },
+
   sourcify: {
     // Disabled by default
     // Doesn't need an API key
