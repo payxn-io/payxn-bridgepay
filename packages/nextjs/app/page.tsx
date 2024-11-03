@@ -3,6 +3,7 @@
 // import Link from "next/link";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
+import { BridgeTokens } from "~~/components/BridgeTokens";
 import { TokenBalances } from "~~/components/TokenBalances";
 // import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
             <Address address={connectedAddress} />
           </div>
           <TokenBalances />
+          <BridgeTokens />
         </div>
       </div>
     </>
