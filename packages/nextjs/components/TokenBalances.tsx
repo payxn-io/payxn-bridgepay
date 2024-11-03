@@ -4,7 +4,7 @@ import { useAccount, useReadContracts, useWatchContractEvent } from "wagmi";
 
 export const TokenBalances = () => {
   const { address: connectedAddress } = useAccount();
-  const tokenAddress = "0xD19e8d3a9720df22F6689EB9B54C691414efE8C2";
+  const tokenAddress = "0xa18f2e81f10a1a89151e99433434dd5a0a09f759";
   const queryClient = useQueryClient();
 
   const result = useReadContracts({
