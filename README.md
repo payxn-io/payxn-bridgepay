@@ -7,10 +7,10 @@ Enables payment of USDC on one chain to another.
 - [x] Update package and use viem to deploy scripts
 - [x] Create contracts directory and build BridgeableToken.sol
 - [x] Add .env, hardhatconfig.ts, tsconfig.json
-- [ ] Create scripts directory
-- [ ] Create DeployBridgeableToken.ts, MintTokens.ts, BridgeTokens.ts scripts, etc
-- [ ] Deploy token to Sepolia testnets
-- [ ] Mint tokens on Sepolia testnets
+- [x] Create scripts directory
+- [x] Create DeployBridgeableToken.ts, MintTokens.ts, BridgeTokens.ts scripts, etc
+- [x] Deploy token to Sepolia testnets
+- [x] Mint tokens on Sepolia testnets
 - [ ] Check token status
 - [ ] Watch for bridges on Sepolia testnets
 - [ ] Bridge tokens from Sepolia
