@@ -38,6 +38,8 @@ npx hardhat verify --constructor-args arguments.js --network sepolia 0xa18f2e81f
 
 <img width="620" alt="Screenshot 2024-11-02 at 10 20 09 PM" src="https://github.com/user-attachments/assets/d0952ece-82b3-4f8d-957e-33f6546b9639">
 
+<img width="626" alt="Screenshot 2024-11-03 at 2 21 40 AM" src="https://github.com/user-attachments/assets/002517e8-b5da-40ee-b09e-e50f436bc243">
+
 ## Requirements
 
 Before you begin, you need to install the following tools:
