@@ -36,6 +36,22 @@ npx hardhat verify --constructor-args arguments.js --network sepolia TOKEN_ADDRE
 npx hardhat verify --constructor-args arguments.js --network sepolia 0xa18f2e81f10a1a89151e99433434dd5a0a09f759
 ```
 
+- [ ] Run watch for bridges scripts
+```
+npx ts-node --files ./scripts/WatchForBridges.ts SOURCE_NETWORK SOURCE_TOKEN_ADDRESS DESTINATION_NETWORK DESTINATION_TOKEN_ADDRESS
+
+npx ts-node --files ./scripts/WatchForBridges.ts sepolia 0xa18f2e81f10a1a89151e99433434dd5a0a09f759 base 0xdda5a1fcd29b7a765a3d8d4fc8cf4ee4fb0ec5be
+
+npx ts-node --files ./scripts/WatchForBridges.ts base 0xdda5a1fcd29b7a765a3d8d4fc8cf4ee4fb0ec5be sepolia 0xa18f2e81f10a1a89151e99433434dd5a0a09f759 
+```
+
+- [ ] Deploy scaffold on localhost:3000
+```
+cd payxn-bridgepay
+yarn install
+yarn start
+```
+
 ### Deployed contracts
 
 <img width="620" alt="Screenshot 2024-11-02 at 10 20 09 PM" src="https://github.com/user-attachments/assets/d0952ece-82b3-4f8d-957e-33f6546b9639">
