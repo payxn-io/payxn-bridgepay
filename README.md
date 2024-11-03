@@ -6,6 +6,7 @@ Enables payment of USDC on one chain to another.
 - [x] Create a fresh new dapp using Scaffold ETH 2 as a base
 - [x] Update package and use viem to deploy scripts
 - [x] Create contracts directory and build BridgeableToken.sol
+- [x] Add .env, hardhatconfig.ts, tsconfig.json
 - [ ] Create scripts directory
 - [ ] Create DeployBridgeableToken.ts, MintTokens.ts, BridgeTokens.ts scripts, etc
 - [ ] Deploy token to Sepolia testnets
@@ -14,6 +15,17 @@ Enables payment of USDC on one chain to another.
 - [ ] Watch for bridges on Sepolia testnets
 - [ ] Bridge tokens from Sepolia
 - [ ] Deploy
+
+### Getting started
+- [1] Compile the contract first
+```
+cd payxn-bridgepay
+npx hardhat compile
+```
+𝘵𝘩𝘪𝘴 𝘸𝘪𝘭𝘭 𝘨𝘦𝘯𝘦𝘳𝘢𝘵𝘦 𝘵𝘩𝘦 𝘢𝘳𝘵𝘪𝘧𝘢𝘤𝘵𝘴 𝘧𝘰𝘭𝘥𝘦𝘳 𝘵𝘩𝘢𝘵 𝘺𝘰𝘶 𝘤𝘢𝘯 𝘤𝘢𝘭𝘭 𝘪𝘯 𝘺𝘰𝘶𝘳 𝘴𝘤𝘳𝘪𝘱𝘵𝘴 𝘪𝘦:
+import { abi } from "../../artifacts/contracts/BridgeableToken.sol/BridgeableToken.json";
+
+
 
 # 🏗 Scaffold-ETH 2
 
