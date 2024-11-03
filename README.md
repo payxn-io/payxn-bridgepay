@@ -28,6 +28,7 @@ import { abi } from "../../artifacts/contracts/BridgeableToken.sol/BridgeableTok
 - [ ] Modify hardhat.config.ts and add etherscan api and sourcify 
 - [ ] Add arguments.js to verify contract 
 ```
+npx hardhat verify --constructor-args arguments.js --network sepolia TOKEN_ADDRESS
 npx hardhat verify --constructor-args arguments.js --network sepolia 0xa18f2e81f10a1a89151e99433434dd5a0a09f759
 ```
 
