@@ -33,3 +33,60 @@ function validateParameters(parameters: string[]) {
   
     return { sourceTokenAddress, sourceNetwork, destinationTokenAddress, destinationNetwork };
   }
+
+  async function main() {
+    const { sourceTokenAddress, sourceNetwork, destinationTokenAddress, destinationNetwork } = validateParameters(process.argv.slice(2));
+  
+    console.log(`listening for bridges on ${sourceTokenAddress}...`);
+  
+    const sourceChain = sourceNetwork === "base" ? baseSepolia : sepolia;
+    const sourceSubdomain = sourceNetwork === "base" ? "base-sepolia" : "eth-sepolia";
+    const sourceTransport = http(`https://${sourceSubdomain}.g.alchemy.com/v2/${providerApiKey}`);
+  
+    const destinationChain = destinationNetwork === "base" ? baseSepolia : sepolia;
+    const destinationSubdomain = destinationNetwork === "base" ? "base-sepolia" : "eth-sepolia";
+    const destinationTransport = http(`https://${destinationSubdomain}.g.alchemy.com/v2/${providerApiKey}`);
+  
+    const publicClient = createPublicClient({
+      chain: sourceChain,
+      transport: sourceTransport,
+    });
+  
+    const account = privateKeyToAccount(`0x${minterPrivateKey}`);
+    const minter = createWalletClient({
+      account,
+      chain: destinationChain,
+      transport: destinationTransport,
+    });
+  
+    const eventAbi = parseAbiItem("event Bridge(address indexed owner, uint256 indexed amount)");
+  
+    publicClient.watchEvent({
+      address: sourceTokenAddress,
+      event: eventAbi,
+      onLogs: logs => {
+        logs.forEach(async log => {
+          const { owner, amount } = log.args;
+          console.log(`Bridge event detected:`);
+          console.log(`Owner: ${owner}`);
+          console.log(`Amount: ${amount} tokens`);
+  
+          const hash = await minter.writeContract({
+            address: destinationTokenAddress,
+            abi,
+            functionName: "mint",
+            args: [owner, amount],
+          });
+          console.log("Transaction hash:", hash);
+          console.log("Waiting for confirmations...");
+          const publicClient = createPublicClient({
+            chain: destinationChain,
+            transport: destinationTransport,
+          });
+          const receipt = await publicClient.waitForTransactionReceipt({ hash });
+          console.log(`Transaction confirmed: ${receipt.status}`);
+          console.log(`Block: ${receipt.blockNumber}`);
+        });
+      }
+    });
+  }
