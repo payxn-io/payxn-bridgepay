@@ -26,3 +26,48 @@ function validateParameters(parameters: string[]) {
   
     return { tokenName, tokenSymbol, network };
   }
+
+  async function main() {
+    const { tokenName, tokenSymbol, network } = validateParameters(process.argv.slice(2));
+  
+    const chain = network === "base" ? baseSepolia : sepolia;
+    const subdomain = network === "base" ? "base-sepolia" : "eth-sepolia";
+    const transport = http(`https://${subdomain}.g.alchemy.com/v2/${providerApiKey}`);
+  
+    const publicClient = createPublicClient({
+      chain: chain,
+      transport: transport,
+    });
+    const blockNumber = await publicClient.getBlockNumber();
+    console.log("Last block number:", blockNumber);
+  
+    const account = privateKeyToAccount(`0x${deployerPrivateKey}`);
+    const deployer = createWalletClient({
+      account,
+      chain: chain,
+      transport: transport,
+    });
+    console.log("Deployer address:", deployer.account.address);
+    const balance = await publicClient.getBalance({
+      address: deployer.account.address,
+    });
+    console.log(
+      "Deployer balance:",
+      formatEther(balance),
+      deployer.chain.nativeCurrency.symbol
+    );
+  
+    console.log("\nDeploying BridgeableToken contract");
+    const hash = await deployer.deployContract({
+      abi,
+      bytecode: bytecode as `0x${string}`,
+      args: [tokenName, tokenSymbol],
+    });
+    console.log("Transaction hash:", hash);
+    console.log("Waiting for confirmations...");
+    const receipt = await publicClient.waitForTransactionReceipt({ hash });
+    const contractAddress = receipt.contractAddress;
+    console.log("BridgeableToken contract deployed to:", contractAddress);
+  
+    process.exit();
+  }
