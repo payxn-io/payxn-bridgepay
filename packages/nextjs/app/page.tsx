@@ -8,6 +8,8 @@ import { TokenBalances } from "~~/components/TokenBalances";
 // import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 
+// import { WormholeConnect } from '@wormhole-foundation/wormhole-connect';
+
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
 
@@ -25,6 +27,7 @@ const Home: NextPage = () => {
           </div>
           <TokenBalances />
           <BridgeTokens />
+          {/* <WormholeConnect /> */}
         </div>
       </div>
     </>
