@@ -66,6 +66,9 @@ yarn start
 ### Executing BridgeTokens
 <img width="667" alt="Screenshot 2024-11-03 at 3 45 38 AM" src="https://github.com/user-attachments/assets/4f8a3661-3534-42ca-9dd6-ba13b073b9ae">
 
+### BridgePay Diagram
+<img width="715" alt="370933310-688283fc-356f-40ed-b019-2901be061740" src="https://github.com/user-attachments/assets/c5d238ef-22db-47d0-bd84-f68b9761b65d">
+
 
 ## Requirements
 
