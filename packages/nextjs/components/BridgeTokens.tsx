@@ -5,7 +5,7 @@ import { useChainId, useWatchContractEvent, useWriteContract } from "wagmi";
 export const BridgeTokens = () => {
   const [amount, setAmount] = useState(1);
   const [destinationTransactionHash, setDestinationTransactionHash] = useState("");
-  const tokenAddress = "0xD19e8d3a9720df22F6689EB9B54C691414efE8C2";
+  const tokenAddress = "0xa18f2e81f10a1a89151e99433434dd5a0a09f759";
 
   const { data, isError, error, isPending, isSuccess, writeContract } = useWriteContract();
   const chainId = useChainId();
@@ -55,13 +55,13 @@ export const BridgeTokens = () => {
   });
 
   return (
-    <div className="card w-96 bg-primary text-primary-content mt-4">
+    <div className="card w-96 bg-primary text-primary-content mt-2">
       <div className="card-body">
         <h2 className="card-title">Bridge Tokens</h2>
 
         {chainId && <p>{`${getSourceChainName(chainId)} → ${getTargetChainName(chainId)}`}</p>}
 
-        <div className="form-control w-full max-w-xs my-4">
+        <div className="form-control w-full max-w-xs my-2">
           <label className="label">
             <span className="label-text">Enter the amount to bridge:</span>
           </label>
@@ -87,7 +87,7 @@ export const BridgeTokens = () => {
             });
           }}
         >
-          Bridge
+          Pay
         </button>
         {isSuccess && (
           <>
