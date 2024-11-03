@@ -12,10 +12,10 @@ Enables payment of USDC on one chain to another.
 - [x] Deploy token to Sepolia testnets
 - [x] Mint tokens on Sepolia testnets
 - [ ] Check token status
-- [ ] Watch for bridges on Sepolia testnets
-- [ ] Bridge tokens from Sepolia
+- [x] Watch for bridges on Sepolia testnets
+- [x] Bridge tokens from Sepolia
 - [x] Add frontend to show tokens in Sepolia
-- [ ] Add frontend to bridge tokens from Sepolia
+- [x] Add frontend to bridge tokens from Sepolia
 - [ ] Deploy
 
 ### Getting started
@@ -44,6 +44,9 @@ npx hardhat verify --constructor-args arguments.js --network sepolia 0xa18f2e81f
 <img width="636" alt="Screenshot 2024-11-03 at 3 13 24 AM" src="https://github.com/user-attachments/assets/bfb2d33c-3119-4e8f-b61c-463ec7e9acaa">
 
 <img width="609" alt="Screenshot 2024-11-03 at 3 12 23 AM" src="https://github.com/user-attachments/assets/33fcad68-c0f8-4974-9f10-207519f6267d">
+
+### Executing BridgeTokens
+<img width="667" alt="Screenshot 2024-11-03 at 3 45 38 AM" src="https://github.com/user-attachments/assets/4f8a3661-3534-42ca-9dd6-ba13b073b9ae">
 
 
 ## Requirements
