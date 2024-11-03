@@ -19,4 +19,9 @@ contract BridgeableToken is ERC20, ERC20Burnable, AccessControl {
         _mint(to, amount);
     }
 
+    function bridge(uint256 value) public virtual {
+        _burn(_msgSender(), value);
+        emit Bridge(msg.sender, value);
+    }
+
 }
