@@ -9,6 +9,8 @@ import { TokenBalances } from "~~/components/TokenBalances";
 import { Address } from "~~/components/scaffold-eth";
 
 // import { WormholeConnect } from '@wormhole-foundation/wormhole-connect';
+// import solana from "@wormhole-foundation/sdk/solana";
+// import sui from "@wormhole-foundation/sdk/sui";
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
