@@ -40,6 +40,12 @@ npx hardhat verify --constructor-args arguments.js --network sepolia 0xa18f2e81f
 
 <img width="626" alt="Screenshot 2024-11-03 at 2 21 40 AM" src="https://github.com/user-attachments/assets/002517e8-b5da-40ee-b09e-e50f436bc243">
 
+### Listening for Bridges
+<img width="636" alt="Screenshot 2024-11-03 at 3 13 24 AM" src="https://github.com/user-attachments/assets/bfb2d33c-3119-4e8f-b61c-463ec7e9acaa">
+
+<img width="609" alt="Screenshot 2024-11-03 at 3 12 23 AM" src="https://github.com/user-attachments/assets/33fcad68-c0f8-4974-9f10-207519f6267d">
+
+
 ## Requirements
 
 Before you begin, you need to install the following tools:
