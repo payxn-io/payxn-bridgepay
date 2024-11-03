@@ -17,7 +17,7 @@ Enables payment of USDC on one chain to another.
 - [ ] Deploy
 
 ### Getting started
-- [1] Compile the contract first
+- [ ] Compile the contract first
 ```
 cd payxn-bridgepay
 npx hardhat compile
