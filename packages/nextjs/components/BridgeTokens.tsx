@@ -6,6 +6,7 @@ export const BridgeTokens = () => {
   const [amount, setAmount] = useState(1);
   const [destinationTransactionHash, setDestinationTransactionHash] = useState("");
   const tokenAddress = "0xa18f2e81f10a1a89151e99433434dd5a0a09f759";
+  const tokenAddress2 = "0xdda5a1fcd29b7a765a3d8d4fc8cf4ee4fb0ec5be";
 
   const { data, isError, error, isPending, isSuccess, writeContract } = useWriteContract();
   const chainId = useChainId();
@@ -40,7 +41,7 @@ export const BridgeTokens = () => {
   const destinationChainId = chainId === 84532 ? 11155111 : 84532;
 
   useWatchContractEvent({
-    address: tokenAddress,
+    address: tokenAddress2,
     abi,
     chainId: destinationChainId,
     onLogs(logs) {
@@ -103,6 +104,12 @@ export const BridgeTokens = () => {
                 {destinationTransactionHash
                   ? `${destinationTransactionHash.slice(0, 7)}...${destinationTransactionHash.slice(-5)}`
                   : ""}
+              </a>
+            </div>
+            <div>
+              Token tx hashes:{" "}
+              <a href={`https://sepolia.basescan.org/token/0xdda5a1fcd29b7a765a3d8d4fc8cf4ee4fb0ec5be`} target="_blank">
+                <u>$USDC on Base Sepolia</u>
               </a>
             </div>
           </>
